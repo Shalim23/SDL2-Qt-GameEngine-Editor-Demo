@@ -10,6 +10,7 @@ file(GLOB_RECURSE src_files "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.h" "${CMAKE_CU
 
 add_executable(${PROJECT_NAME} ${src_files})
 
+target_include_directories(SDL2-Qt-GameEngine-Editor PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Source/Registry")
 target_link_libraries(${PROJECT_NAME} PRIVATE SDL2-Qt-GameEngine-Editor)
 
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${src_files})
